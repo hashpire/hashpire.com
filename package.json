@@ -1,0 +1,39 @@
+{
+  "name": "hashpire.com",
+  "version": "1.0.0",
+  "description": "[![Board Status](https://dev.azure.com/hashpire/a8e60057-0fb2-4c91-950d-8e8a3863f157/8b141bb8-266d-4d18-8c1a-ddb4b73cf8ae/_apis/work/boardbadge/abd211b0-b2e7-45e1-b2a2-7d64cfa25ec0)](https://dev.azure.com/hashpire/a8e60057-0fb2-4c91-950d-8e8a3863f157/_boards/board/t/8b141bb8-266d-4d18-8c1a-ddb4b73cf8ae/Microsoft.RequirementCategory) # Hashpire.com Inspiring the world with the power of hash",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --config ./webpack.config.js --mode development",
+    "build": "webpack --config ./webpack.config.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashpire/hashpire.com.git"
+  },
+  "keywords": [],
+  "author": "anakornk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hashpire/hashpire.com/issues"
+  },
+  "homepage": "https://github.com/hashpire/hashpire.com#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "react-hot-loader": "^4.11.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3",
+    "webpack-dev-server": "^3.7.1"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/runtime": "^7.4.5",
+    "ipfs": "^0.36.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
