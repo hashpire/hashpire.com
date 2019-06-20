@@ -18,7 +18,7 @@ const FixedMenu = (props) => (
       <Menu fixed='top' inverted id='navbar'>
         <Container>
           <Menu.Item as='a' header>
-            <Image size='small' src='/assets/images/logo.png' />
+            <Image size='small' src='assets/images/logo.png' />
           </Menu.Item>
           <Menu.Item as='a'>Home</Menu.Item>
 
