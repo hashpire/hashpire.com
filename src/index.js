@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import IPFS from 'ipfs';
+import App from './App';
 
 const node = new IPFS()
 
@@ -14,7 +15,7 @@ node.on('ready', async () => {
 })
 
 ReactDOM.render(
-  <div>Hello World</div>,
+  <App/>,
   document.getElementById('app')
 );
 
