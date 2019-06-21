@@ -1,0 +1,22 @@
+body {
+  background-color: #F7F7F7;
+}
+
+#navbar {
+  background-color: #292929;
+}
+
+#footer {
+  background-color: #292929;
+}
+
+#page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#mobile-left-menu, #mobile-right-menu {
+  align-self: center;
+}
