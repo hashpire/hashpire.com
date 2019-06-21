@@ -16,3 +16,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+#mobile-left-menu, #mobile-right-menu {
+  align-self: center;
+}

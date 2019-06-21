@@ -3,7 +3,6 @@ import 'semantic-ui-css/semantic.min.css';
 import './Stylesheets/index.css';
 import MarkdownRenderer from '../Utils/MarkdownRenderer';
 import { Button } from 'semantic-ui-react';
-import FixedMenu from './Components/FixedMenu';
 import {
   Container,
   Divider,
@@ -15,12 +14,14 @@ import {
   Menu,
   Segment,
 } from 'semantic-ui-react';
+import ResponsiveContainer from './Components/ResponsiveContainer';
+
 class App extends React.Component {
   render() {
     // <MarkdownRenderer url={'/assets/test.md'}/><Button>Click Here</Button>
     return (
-      <FixedMenu>
-        <Container text style={{ marginTop: '7em' }}>
+      <ResponsiveContainer>
+        <Container text>
           <Header as='h1'>Semantic UI React Fixed Template</Header>
           <p>This is a basic fixed menu template using fixed size containers.</p>
           <p>
@@ -34,7 +35,7 @@ class App extends React.Component {
           <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
           <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
         </Container>
-      </FixedMenu>
+      </ResponsiveContainer>
     );
   }
 }
