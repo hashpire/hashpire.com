@@ -17,6 +17,7 @@ import {
   Dropdown
 } from 'semantic-ui-react';
 import Footer from './Footer';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'
@@ -25,10 +26,20 @@ const getWidth = () => {
 }
 
 class DesktopContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: 0 }
+    this.onChangeMenu = this.onChangeMenu.bind(this);
+  }
+
+  onChangeMenu(history, item, i) {
+    this.setState({active: i})
+    history.push(item.path); 
+  }
 
   render() {
-    const { children } = this.props
-
+    const { children, menuConfig } = this.props
+    let that = this;
     return (
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
           <div id='page'>
@@ -38,7 +49,17 @@ class DesktopContainer extends Component {
                   <Menu.Item as='a' header>
                     <Image size='small' src='assets/images/logo.png' />
                   </Menu.Item>
-                  <Menu.Item as='a'>Home</Menu.Item>
+                  { 
+                    menuConfig && menuConfig.map((item, i)=>{
+                      return (
+                        <Route key={i} render={({ history}) => (
+                          <Menu.Item  active={this.state.active == i} as='a' onClick={ () => this.onChangeMenu(history, item, i)}>
+                           {item.name}
+                          </Menu.Item>
+                        )} />
+                      )
+                    })
+                  }
 
                   <Dropdown item simple text='Dropdown'>
                     <Dropdown.Menu>
@@ -70,8 +91,8 @@ class DesktopContainer extends Component {
   }
 }
 
-DesktopContainer.propTypes = {
-  children: PropTypes.node,
-}
+// DesktopContainer.propTypes = {
+//   children: PropTypes.node,
+// }
 
 export default DesktopContainer;
