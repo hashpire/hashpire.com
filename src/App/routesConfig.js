@@ -1,6 +1,3 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import RouteWithSubRoutes from './Utils/RouteWithSubRoutes';
 import Home from './Pages/Home';
 import { Tacos, Bus, Cart } from './Pages/Tacos';
 import Category from './Pages/Category';

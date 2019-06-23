@@ -16,7 +16,7 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 import Footer from './Footer';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'

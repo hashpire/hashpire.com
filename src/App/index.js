@@ -17,7 +17,7 @@ import {
 import ResponsiveContainer from './Components/ResponsiveContainer';
 import routesConfig from './routesConfig';
 import RouteWithSubRoutes from './Utils/RouteWithSubRoutes';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import menuConfig from './menuConfig';
 
 class App extends React.Component {
