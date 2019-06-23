@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --config ./webpack.config.js --mode development",
+    "start": "webpack-dev-server --open --config ./webpack.config.js --mode development --host 0.0.0.0",
     "build": "webpack --config ./webpack.config.js --mode production"
   },
   "repository": {
@@ -42,6 +42,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.8",
+    "react-router-dom": "^5.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.2",
     "ws": "^7.0.1"
