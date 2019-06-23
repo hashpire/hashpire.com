@@ -51,70 +51,61 @@ class MobileContainer extends Component {
         getWidth={getWidth}
         maxWidth={Responsive.onlyMobile.maxWidth}
       >
-        <div id='page'>
-          <div>
-            <Sidebar
-              as={Menu}
-              animation='push'
-              inverted
-              onHide={this.handleSidebarHide}
-              vertical
-              visible={sidebarOpened}
-            >
-              { 
-                menuConfig && menuConfig.map((item, i)=>{
-                  return (
-                    <Route key={i} render={({ history}) => (
-                      <Menu.Item  active={this.state.active == i} as='a' onClick={ () => this.onChangeMenu(history, item, i)}>
-                        {item.name}
-                      </Menu.Item>
-                    )} />
-                  )
-                })
-              }
-              <Menu.Item as='a' active>
-                Home
-              </Menu.Item>
-              <Menu.Item as='a'>Work</Menu.Item>
-              <Menu.Item as='a'>Company</Menu.Item>
-              <Menu.Item as='a'>Careers</Menu.Item>
-              <Menu.Item as='a'>Log in</Menu.Item>
-              <Menu.Item as='a'>Sign Up</Menu.Item>
-            </Sidebar>
+        <Sidebar
+          as={Menu}
+          animation='overlay'
+          inverted
+          onHide={this.handleSidebarHide}
+          vertical
+          visible={sidebarOpened}
+          width='thin'
+          size='huge'
+        >
+          { 
+            menuConfig && menuConfig.map((item, i)=>{
+              return (
+                <Route key={i} render={({ history}) => (
+                  <Menu.Item  active={this.state.active == i} as='a' onClick={ () => this.onChangeMenu(history, item, i)}>
+                    {item.name}
+                  </Menu.Item>
+                )} />
+              )
+            })
+          }
+        </Sidebar>
 
-            <Sidebar.Pusher dimmed={sidebarOpened}>
-              <Segment
-                inverted
-                textAlign='center'
-                vertical
-              >
-                <Container>
-                  <Menu inverted pointing secondary size='large'>
-                    <Menu.Item onClick={this.handleToggle} id='mobile-left-menu'>
-                      <Icon name='sidebar' />
-                    </Menu.Item>
-                    <Menu.Item onClick={this.handleToggle}>
-                      <Image size='mini' src='assets/images/icon.png' />
-                    </Menu.Item>
-                    <Menu.Item position='right' id='mobile-right-menu'>
-                      <Button as='a' inverted>
-                        Log in
-                      </Button>
-                      <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                        Sign Up
-                      </Button>
-                    </Menu.Item>
-                  </Menu>
-                </Container>
-              </Segment>
+        <Sidebar.Pusher dimmed={sidebarOpened} onClick={()=> sidebarOpened && this.handleSidebarHide()}>
+          <Segment
+            inverted
+            textAlign='center'
+            vertical
+            id='navbar'
+          >
+            <Container>
+              <Menu inverted pointing secondary size='large'>
+                <Menu.Item onClick={this.handleToggle} id='mobile-left-menu'>
+                  <Icon name='sidebar' />
+                </Menu.Item>
+                <Menu.Item onClick={this.handleToggle}>
+                  <Image size='mini' src='assets/images/icon.png' />
+                </Menu.Item>
+                <Menu.Item position='right' id='mobile-right-menu'>
+                  <Button as='a' inverted>
+                    Log in
+                  </Button>
+                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
+                    Sign Up
+                  </Button>
+                </Menu.Item>
+              </Menu>
+            </Container>
+          </Segment>
 
-              <div style={{ marginTop: '2em' }}>
-                {children}
-              </div>
-            </Sidebar.Pusher>
+          <div style={{ marginTop: '2em' }}>
+            {children}
           </div>
           <Footer/>
-        </div>
+        </Sidebar.Pusher>
       </Responsive>
     )
   }
