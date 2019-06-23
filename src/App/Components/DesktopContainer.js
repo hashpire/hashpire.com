@@ -39,7 +39,7 @@ class DesktopContainer extends Component {
 
   render() {
     const { children, menuConfig } = this.props
-    let that = this;
+
     return (
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
           <div id='page'>

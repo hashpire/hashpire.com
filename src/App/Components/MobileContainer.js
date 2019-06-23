@@ -16,6 +16,7 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 import Footer from './Footer';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'
@@ -24,14 +25,24 @@ const getWidth = () => {
 }
 
 class MobileContainer extends Component {
-  state = {}
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.onChangeMenu = this.onChangeMenu.bind(this);
+  }
+
+  onChangeMenu(history, item, i) {
+    this.setState({active: i})
+    history.push(item.path); 
+    this.handleSidebarHide();
+  }
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false })
 
   handleToggle = () => this.setState({ sidebarOpened: true })
 
   render() {
-    const { children } = this.props
+    const { children, menuConfig } = this.props
     const { sidebarOpened } = this.state
 
     return (
@@ -50,6 +61,17 @@ class MobileContainer extends Component {
               vertical
               visible={sidebarOpened}
             >
+              { 
+                menuConfig && menuConfig.map((item, i)=>{
+                  return (
+                    <Route key={i} render={({ history}) => (
+                      <Menu.Item  active={this.state.active == i} as='a' onClick={ () => this.onChangeMenu(history, item, i)}>
+                        {item.name}
+                      </Menu.Item>
+                    )} />
+                  )
+                })
+              }
               <Menu.Item as='a' active>
                 Home
               </Menu.Item>
