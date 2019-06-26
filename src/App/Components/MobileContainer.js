@@ -17,6 +17,7 @@ import {
 } from 'semantic-ui-react';
 import Footer from './Footer';
 import { Route } from "react-router-dom";
+import { matchPath } from "react-router";
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'
@@ -32,7 +33,6 @@ class MobileContainer extends Component {
   }
 
   onChangeMenu(history, item, i) {
-    this.setState({active: i})
     history.push(item.path); 
     this.handleSidebarHide();
   }
@@ -61,17 +61,23 @@ class MobileContainer extends Component {
           width='thin'
           size='huge'
         >
-          { 
-            menuConfig && menuConfig.map((item, i)=>{
-              return (
-                <Route key={i} render={({ history}) => (
-                  <Menu.Item  active={this.state.active == i} as='a' onClick={ () => this.onChangeMenu(history, item, i)}>
-                    {item.name}
-                  </Menu.Item>
-                )} />
+          <Route render={({ history, location}) => {
+            return menuConfig.map((item, i)=> {
+              let active = matchPath(location.pathname, 
+                {
+                  path: item.path,
+                  exact: true,
+                  strict: false
+                }
               )
+
+              return (
+                <Menu.Item key={i} active={active ? true : false} as='a' onClick={ () => this.onChangeMenu(history, item)}>
+                  {item.name}
+                </Menu.Item>
+              );
             })
-          }
+          }}/>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened} onClick={()=> sidebarOpened && this.handleSidebarHide()}>

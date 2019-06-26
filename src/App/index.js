@@ -40,11 +40,11 @@ class App extends React.Component {
             <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
             <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
           </Container> */}
-            <div>
-              {routesConfig.map((route, i) => (
-                <RouteWithSubRoutes key={i} {...route} />
-              ))}
-            </div>
+          <div>
+            {routesConfig.map((route, i) => (
+              <RouteWithSubRoutes key={i} {...route} />
+            ))}
+          </div>
         </ResponsiveContainer>
       </Router>
     );
