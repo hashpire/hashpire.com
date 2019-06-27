@@ -2,6 +2,8 @@ import Home from './Pages/Home';
 import { Tacos, Bus, Cart } from './Pages/Tacos';
 import Category from './Pages/Category';
 import Item from './Pages/Item';
+import Projects from './Pages/Projects';
+import Technologies from './Pages/Technologies';
 
 const RoutesConfig = [
   {
@@ -31,6 +33,16 @@ const RoutesConfig = [
   {
     path: "/category/:item",
     component: Item,
+  },
+  {
+    path: "/projects",
+    component: Projects,
+    exact: true
+  },
+  {
+    path: "/technologies",
+    component: Technologies,
+    exact: true
   }
 ];
 

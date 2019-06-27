@@ -1,11 +1,15 @@
 const MenuConfig = [
   {
     path: "/",
-    name: "Head",
+    name: "Home",
   },
   {
-    path: "/tacos",
-    name: "Tacos"
+    path: "/projects",
+    name: "Projects"
+  },
+  {
+    path: "/technologies",
+    name: "Technologies"
   },
   {
     path: '/category',

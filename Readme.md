@@ -14,3 +14,76 @@ npm start
 ```
 npm run build
 ```
+
+
+### Design
+```
+
+var Collection = {
+    List: 0,
+
+}
+
+// Item Renderer
+var Item = {
+    MarkDown: 0,
+    TXT: 1,
+    JSON: ,
+    XML: ,
+    HTML: ,
+    MP4: 
+}
+
+ProtobufTypeFormat = [
+    {name: string, }
+]
+
+
+function rules(sender) {
+    super();
+    if sender has enough coin
+        return true
+    else
+        return false
+    end
+}
+
+function rules2(sender) {
+    if sender has permission / in this role
+    if 
+}
+
+class Node {
+    constructor(parents, tid, data, rules) {
+        parents.forEach((parent) => {
+            // check permission
+            // if not ok
+            // throw();
+            parent.children.push(this);
+        });
+
+        this.parents = [...parents];
+        this.children = [];
+        this.tid = tid;
+        this.data = Object.assign({}, data);
+        universe.push(this);
+        this.id = universe.length;
+    }
+
+    function addChild(child) {
+
+        this.children.push(child);
+    }
+
+}
+
+let universe = [];
+
+let earth = new Node([], );
+
+function getNode(nodeId) -> Node;
+
+
+
+
+```

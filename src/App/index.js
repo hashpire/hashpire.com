@@ -21,25 +21,13 @@ import { HashRouter as Router } from "react-router-dom";
 import menuConfig from './menuConfig';
 
 class App extends React.Component {
+
+
   render() {
     // <MarkdownRenderer url={'/assets/test.md'}/><Button>Click Here</Button>
     return (
       <Router>
         <ResponsiveContainer menuConfig={menuConfig}>
-          {/* <Container text>
-            <Header as='h1'>Semantic UI React Fixed Template</Header>
-            <p>This is a basic fixed menu template using fixed size containers.</p>
-            <p>
-              A text container is used for the main container, which is useful for single column layouts.
-            </p>
-            <Image src='/images/wireframe/media-paragraph.png' style={{ marginTop: '2em' }} />
-            <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-            <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-            <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-            <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-            <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-            <Image src='/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-          </Container> */}
           <div>
             {routesConfig.map((route, i) => (
               <RouteWithSubRoutes key={i} {...route} />
