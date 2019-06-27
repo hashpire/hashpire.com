@@ -9,18 +9,33 @@ class MarkdownRenderer extends React.Component {
     this.state = {
       html: ''
     }
+
+    this.fetchData = this.fetchData.bind(this);
   }
 
-  componentDidMount() {
+  fetchData() {
     let { url } = this.props;
+
+    if(!url) {
+      return;
+    }
+
     fetch(url)
-      .then(response => response.text())
-      .then(data => {
-        this.setState({
-          html: <ReactMarkdown source={data} />
-        });
+    .then(response => response.text())
+    .then(data => {
+      this.setState({
+        html: <ReactMarkdown source={data} />
       });
-   
+    });
+  }
+  
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  componentDidUpdate() {
+    console.log("update");
+    // this.fetchData();
   }
 
   render() {

@@ -4,6 +4,7 @@ import Category from './Pages/Category';
 import Item from './Pages/Item';
 import Projects from './Pages/Projects';
 import Technologies from './Pages/Technologies';
+import NodeRenderer from './Components/NodeRenderer';
 
 const RoutesConfig = [
   {
@@ -43,6 +44,10 @@ const RoutesConfig = [
     path: "/technologies",
     component: Technologies,
     exact: true
+  },
+  {
+    path: "/nodes/:id",
+    component: NodeRenderer
   }
 ];
 
