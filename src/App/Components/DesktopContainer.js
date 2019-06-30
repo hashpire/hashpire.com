@@ -59,31 +59,32 @@ class DesktopContainer extends Component {
                           strict: false
                         }
                       )
+                      
+                      if(item.sub) {
+                        return (
+                          <Dropdown item simple text={item.name}>
+                            <Dropdown.Menu>
+                              { item.sub.map((child) => {
+                                return (
+                                  <Dropdown.Item>{child.name}</Dropdown.Item>
+                                );
+                              })
 
-                      return (
-                        <Menu.Item key={i} active={active ? true : false} as='a' onClick={ () => this.onChangeMenu(history, item)}>
-                          {item.name}
-                        </Menu.Item>
-                      );
+                              }
+                            </Dropdown.Menu>
+                          </Dropdown>
+                        );
+                      } else {
+                        return (
+                          <Menu.Item key={i} active={active ? true : false} as='a' onClick={ () => this.onChangeMenu(history, item)}>
+                            {item.name}
+                          </Menu.Item>
+                        );
+                      }
+
                     })
                   }}/>
-                  <Dropdown item simple text='Dropdown'>
-                    <Dropdown.Menu>
-                      <Dropdown.Item>List Item</Dropdown.Item>
-                      <Dropdown.Item>List Item</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Header>Header Item</Dropdown.Header>
-                      <Dropdown.Item>
-                        <i className='dropdown icon' />
-                        <span className='text'>Submenu</span>
-                        <Dropdown.Menu>
-                          <Dropdown.Item>List Item</Dropdown.Item>
-                          <Dropdown.Item>List Item</Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown.Item>
-                      <Dropdown.Item>List Item</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+
                 </Container>
               </Menu>
               <div style={{ marginTop: '9em' }}>
