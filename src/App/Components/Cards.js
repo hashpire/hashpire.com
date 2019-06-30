@@ -22,14 +22,14 @@ class Cards extends React.Component {
                 <Card key={index} link as={Link} to={url}>
                   <Image src='/assets/images/logo.png' wrapped ui={false} />
                   <Card.Content>
-                    <Card.Header>Daniel</Card.Header>
+                    <Card.Header>{child.metadata}</Card.Header>
                     <Card.Description>
                       Daniel is a comedian living in Nashville.
                     </Card.Description>
                   </Card.Content>
                   <Card.Content extra>
-                    <Icon name='user' />
-                    10 Friends
+                    <Icon name='file outline' />
+                    {child.children.length} บทความ
                   </Card.Content>
                 </Card>
               );
