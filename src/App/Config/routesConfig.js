@@ -1,8 +1,9 @@
 import Home from '../Pages/Home';
 import Projects from '../Pages/Projects';
 import Technologies from '../Pages/Technologies';
-import NodeRenderer from '../Components/NodeRenderer';
+import Post from '../Pages/Post';
 import Contact from '../Pages/Contact';
+import Tag from '../Pages/Tag';
 
 const RoutesConfig = [
   {
@@ -21,14 +22,18 @@ const RoutesConfig = [
     exact: true
   },
   {
-    path: "/nodes/:id",
-    component: NodeRenderer
+    path: "/posts/:id",
+    component: Post
   },
   {
     path: '/contact',
     component: Contact,
     exact: true
-  }
+  },
+  {
+    path: "/tags/:id",
+    component: Tag,
+  },
   // {
   //   path: "/tacos",
   //   component: Tacos,

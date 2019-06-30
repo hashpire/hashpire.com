@@ -1,7 +1,10 @@
 import React from 'react';
+import NodeRenderer from '../Components/NodeRenderer';
 
-function Home() {
-  return <h2>Home</h2>;
+class Home extends React.Component {
+  render() {
+    return <NodeRenderer nodeId={1} />
+  }
 }
 
 export default Home;

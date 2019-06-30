@@ -3,8 +3,7 @@ import { Container, List, Header, Icon } from 'semantic-ui-react';
 function Contact() {
   return (
     <Container text>
-      <Header as='h2' dividing>
-        <Icon name='settings' />
+      <Header as='h1' dividing textAlign='center'>
         <Header.Content>ติดต่อเรา</Header.Content>
       </Header>
       <List>

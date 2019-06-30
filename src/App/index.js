@@ -1,7 +1,6 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import './Stylesheets/index.css';
-import MarkdownRenderer from './Components/MarkdownRenderer';
 import { Button } from 'semantic-ui-react';
 import {
   Container,
