@@ -1,16 +1,20 @@
 const MenuConfig = [
   {
     path: "/",
-    name: "Home",
+    name: "หน้าหลัก",
   },
   {
     path: "/projects",
-    name: "Projects"
+    name: "โปรเจค"
   },
   {
     path: "/technologies",
-    name: "Technologies"
+    name: "เทคโนโลยี"
   },
+  {
+    path: '/contact',
+    name: 'ติดต่อเรา'
+  }
   // {
   //   path: '/category',
   //   name: 'Category',

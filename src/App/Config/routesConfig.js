@@ -1,10 +1,8 @@
 import Home from '../Pages/Home';
-import { Tacos, Bus, Cart } from '../Pages/Tacos';
-import Category from '../Pages/Category';
-import Item from '../Pages/Item';
 import Projects from '../Pages/Projects';
 import Technologies from '../Pages/Technologies';
 import NodeRenderer from '../Components/NodeRenderer';
+import Contact from '../Pages/Contact';
 
 const RoutesConfig = [
   {
@@ -26,6 +24,11 @@ const RoutesConfig = [
     path: "/nodes/:id",
     component: NodeRenderer
   },
+  {
+    path: '/contact',
+    component: Contact,
+    exact: true
+  }
   // {
   //   path: "/tacos",
   //   component: Tacos,

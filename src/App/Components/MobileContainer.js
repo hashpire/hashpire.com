@@ -110,7 +110,7 @@ class MobileContainer extends Component {
           <div style={{ marginTop: '2em' }}>
             {children}
           </div>
-          <Footer/>
+          <Footer menuConfig={menuConfig}/>
         </Sidebar.Pusher>
       </Responsive>
     )

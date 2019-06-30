@@ -91,7 +91,7 @@ class DesktopContainer extends Component {
                 {children}
               </div>
             </div>  
-            <Footer/>
+            <Footer menuConfig={menuConfig}/>
           </div>
         </Responsive>
     )
