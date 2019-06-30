@@ -15,10 +15,10 @@ import {
   Segment,
 } from 'semantic-ui-react';
 import ResponsiveContainer from './Components/ResponsiveContainer';
-import routesConfig from './routesConfig';
+import routesConfig from './Config/routesConfig';
 import RouteWithSubRoutes from './Utils/RouteWithSubRoutes';
 import { HashRouter as Router } from "react-router-dom";
-import menuConfig from './menuConfig';
+import menuConfig from './Config/menuConfig';
 
 class App extends React.Component {
 
