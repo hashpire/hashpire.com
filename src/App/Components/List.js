@@ -8,7 +8,7 @@ class List extends React.Component {
     console.log(this.props)
     return (
       <Container text>
-        <Header as='h1' textAlign='center' dividing>{node.metadata}</Header>
+        <Header as='h1' textAlign='center' dividing>{node.metadata.title}</Header>
         <Item.Group divided>
           {
             children.map((child, index) => {
@@ -24,13 +24,12 @@ class List extends React.Component {
                   <Item.Image src='assets/images/icon.png' size='small'/>
                   <Item.Content verticalAlign='middle'>
                     <Item.Header>
-                      <Link to={url}>{child.metadata}</Link>
+                      <Link to={url}>{child.metadata.title}</Link>
                     </Item.Header>
                     <Item.Meta>
                       <span>{`By ${accounts[child.author_id].username}`}</span>
                     </Item.Meta>
                     <Item.Extra>
-                      <Icon color='orange' name='thumbs up outline' />121 &nbsp;
                       <Icon color='orange' name='comment outline' />{child.children.length} &nbsp;
                     </Item.Extra>
                   </Item.Content>
