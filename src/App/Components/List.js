@@ -21,7 +21,7 @@ class List extends React.Component {
 
               return (
                 <Item key={index}>
-                  <Item.Image src='assets/images/icon.png' size='small'/>
+                  <Item.Image src={child.metadata.image ? `assets/data/${child.metadata.image}` : 'assets/images/icon.png'} size='small'/>
                   <Item.Content verticalAlign='middle'>
                     <Item.Header>
                       <Link to={url}>{child.metadata.title}</Link>
