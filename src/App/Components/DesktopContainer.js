@@ -18,6 +18,8 @@ import {
 } from 'semantic-ui-react';
 import Footer from './Footer';
 import { Route } from "react-router-dom";
+import { matchPath } from "react-router";
+
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'
@@ -28,12 +30,11 @@ const getWidth = () => {
 class DesktopContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: 0 }
+    this.state = { }
     this.onChangeMenu = this.onChangeMenu.bind(this);
   }
 
-  onChangeMenu(history, item, i) {
-    this.setState({active: i})
+  onChangeMenu(history, item) {
     history.push(item.path); 
   }
 
@@ -49,42 +50,48 @@ class DesktopContainer extends Component {
                   <Menu.Item as='a' header>
                     <Image size='small' src='assets/images/logo.png' />
                   </Menu.Item>
-                  { 
-                    menuConfig && menuConfig.map((item, i)=>{
-                      return (
-                        <Route key={i} render={({ history}) => (
-                          <Menu.Item  active={this.state.active == i} as='a' onClick={ () => this.onChangeMenu(history, item, i)}>
-                           {item.name}
-                          </Menu.Item>
-                        )} />
+                  <Route render={({ history, location}) => {
+                    return menuConfig.map((item, i)=> {
+                      let active = matchPath(location.pathname, 
+                        {
+                          path: item.path,
+                          exact: true,
+                          strict: false
+                        }
                       )
-                    })
-                  }
+                      
+                      if(item.sub) {
+                        return (
+                          <Dropdown item simple text={item.name}>
+                            <Dropdown.Menu>
+                              { item.sub.map((child) => {
+                                return (
+                                  <Dropdown.Item>{child.name}</Dropdown.Item>
+                                );
+                              })
 
-                  <Dropdown item simple text='Dropdown'>
-                    <Dropdown.Menu>
-                      <Dropdown.Item>List Item</Dropdown.Item>
-                      <Dropdown.Item>List Item</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Header>Header Item</Dropdown.Header>
-                      <Dropdown.Item>
-                        <i className='dropdown icon' />
-                        <span className='text'>Submenu</span>
-                        <Dropdown.Menu>
-                          <Dropdown.Item>List Item</Dropdown.Item>
-                          <Dropdown.Item>List Item</Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown.Item>
-                      <Dropdown.Item>List Item</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                              }
+                            </Dropdown.Menu>
+                          </Dropdown>
+                        );
+                      } else {
+                        return (
+                          <Menu.Item key={i} active={active ? true : false} as='a' onClick={ () => this.onChangeMenu(history, item)}>
+                            {item.name}
+                          </Menu.Item>
+                        );
+                      }
+
+                    })
+                  }}/>
+
                 </Container>
               </Menu>
               <div style={{ marginTop: '9em' }}>
                 {children}
               </div>
             </div>  
-            <Footer/>
+            <Footer menuConfig={menuConfig}/>
           </div>
         </Responsive>
     )
