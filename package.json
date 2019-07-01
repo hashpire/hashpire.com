@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
+    "disqus-react": "^1.0.6",
     "ipfs": "^0.36.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
