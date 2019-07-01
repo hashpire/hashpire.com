@@ -30,9 +30,8 @@ class List extends React.Component {
                       <span>{`By ${accounts[child.author_id].username}`}</span>
                     </Item.Meta>
                     <Item.Extra>
-                      <Icon color='green' name='check' />121 Votes &nbsp;
-                      <Icon color='green' name='thumbs up outline' />121 Votes &nbsp;
-                      <Icon color='green' name='comment outline' />{child.children.length} &nbsp;
+                      <Icon color='orange' name='thumbs up outline' />121 &nbsp;
+                      <Icon color='orange' name='comment outline' />{child.children.length} &nbsp;
                     </Item.Extra>
                   </Item.Content>
                 </Item>
