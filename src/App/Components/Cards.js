@@ -20,7 +20,7 @@ class Cards extends React.Component {
 
               return (
                 <Card key={index} link as={Link} to={url}>
-                  <Image src={child.metadata.image ? `assets/data/${child.metadata.image}` : 'assets/images/icon.png'} wrapped ui={false} />
+                  <Image src={child.metadata.image ? `assets/data/${child.metadata.image}` : 'assets/images/icon-dark.png'} wrapped ui={false} />
                   <Card.Content>
                     <Card.Header>{child.metadata.title}</Card.Header>
                     <Card.Description>

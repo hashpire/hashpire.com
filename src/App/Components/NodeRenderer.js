@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'semantic-ui-react';
+import { Container, Loader } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 import ReactMarkdown from 'react-markdown';
 import List from './List';
@@ -54,7 +54,7 @@ class NodeRenderer extends React.Component {
 
     if(!node) {
       return (
-        <div>Loading</div>
+        <Loader content='Loading' active size='large'/>
       )
 
     }
