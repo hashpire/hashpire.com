@@ -11,7 +11,6 @@ class Post extends React.Component {
     const disqusConfig = {
       url: `https://hashpire.com${this.props.match.url}`,
       identifier: this.props.match.params.id,
-      title: 'Tata',
     };
 
     return (
