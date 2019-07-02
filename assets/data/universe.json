@@ -30,7 +30,10 @@
       "tid": 0,
       "data_path": "",
       "author_id": 0,
-      "metadata": "Home"
+      "metadata": {
+        "title": "หน้าหลัก",
+        "description": "Index Page"
+      }
     },
     {
       "id": 2,
@@ -39,7 +42,10 @@
       "tid": 0,
       "data_path": "" ,
       "author_id": "0",
-      "metadata": "Projects"
+      "metadata": {
+        "title": "โปรเจค",
+        "description": "หน้าโปรเจค"
+      }
     },
     {
       "id": 3,
@@ -48,7 +54,10 @@
       "tid": 0,
       "data_path": "",
       "author_id": 0,
-      "metadata": "Technologies"
+      "metadata": {
+        "title": "เทคโนโลยี",
+        "description": "Tech"
+      }
     },
     {
       "id": 4,
@@ -57,7 +66,11 @@
       "tid": 0,
       "data_path": "",
       "author_id": 0,
-      "metadata": "Bitcoin"
+      "metadata": {
+        "title": "Bitcoin",
+        "description": "Bitcoin",
+        "image": "images/bitcoin.jpg"
+      }
     },
     {
       "id": 5,
@@ -66,7 +79,11 @@
       "tid": 0,
       "data_path": "",
       "author_id": 0,
-      "metadata": "Ethereum"
+      "metadata": {
+        "title": "Ethereum",
+        "description": "ETH",
+        "image": "images/ethereum.jpg"
+      }
     },
     {
       "id": 6,
@@ -75,7 +92,11 @@
       "tid": 0,
       "data_path": "",
       "author_id": 0,
-      "metadata": "Consensus"
+      "metadata": {
+        "title": "Consensus",
+        "description": "Bitcoin",
+        "image": "images/consensus.png"
+      }
     },    
     {
       "id": 7,
@@ -84,7 +105,11 @@
       "tid": 0,
       "data_path": "",
       "author_id": 0,
-      "metadata": "Key Management"
+      "metadata": {
+        "title": "Key Management",
+        "description": "Bitcoin",
+        "image": "images/private-key.jpg"
+      }
     },
     {
       "id": 8,
@@ -93,7 +118,11 @@
       "tid": 1,
       "data_path": "md/1.md",
       "author_id": 0,
-      "metadata": "Polkadot: Web3.0"
+      "metadata": {
+        "title": "Polkadot 3.0",
+        "description": "Bitcoin",
+        "image": "images/polkadot.png"
+      }
     },
     {
       "id": 9,
@@ -102,7 +131,11 @@
       "tid": 1,
       "data_path": "md/2.md",
       "author_id": 0,
-      "metadata": "Desc Here"
+      "metadata": {
+        "title": "Cosmos",
+        "description": "Bitcoin",
+        "image": ""
+      }
     },
     {
       "id": 10,
@@ -111,7 +144,11 @@
       "tid": 1,
       "data_path": "md/3.md",
       "author_id": 1,
-      "metadata": "yo"
+      "metadata": {
+        "title": "Superman",
+        "description": "Bitcoin",
+        "image": ""
+      }
     }
   ]
 }
