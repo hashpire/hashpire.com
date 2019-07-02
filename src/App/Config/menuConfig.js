@@ -4,6 +4,10 @@ const MenuConfig = [
     name: "หน้าหลัก",
   },
   {
+    path: "/news",
+    name: "ข่าวสาร 24HR"
+  },
+  {
     path: "/projects",
     name: "โปรเจค"
   },

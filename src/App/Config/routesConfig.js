@@ -4,6 +4,7 @@ import Technologies from '../Pages/Technologies';
 import Post from '../Pages/Post';
 import Contact from '../Pages/Contact';
 import Tag from '../Pages/Tag';
+import News from '../Pages/News';
 
 const RoutesConfig = [
   {
@@ -34,6 +35,10 @@ const RoutesConfig = [
     path: "/tags/:id",
     component: Tag,
   },
+  {
+    path: '/news',
+    component: News,
+  }
   // {
   //   path: "/tacos",
   //   component: Tacos,
