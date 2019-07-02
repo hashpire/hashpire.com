@@ -1,6 +1,6 @@
 import React from 'react';
 import NodeRenderer from '../Components/NodeRenderer';
-import { Breadcrumb, Container, Grid } from 'semantic-ui-react';
+import { Breadcrumb, Container, Grid, Loader } from 'semantic-ui-react';
 
 class Home extends React.Component {
   componentDidMount () {
@@ -19,8 +19,10 @@ class Home extends React.Component {
               <Grid.Column width={8}>
                 <NodeRenderer nodeId={1} />
               </Grid.Column>
-              <Grid.Column width={3} verticalAlign='middle'>
-                <a className="twitter-timeline" data-lang="th" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/anak0rn/lists/test?ref_src=twsrc%5Etfw">A Twitter List by anak0rn</a>
+              <Grid.Column width={3}>
+                <a className="twitter-timeline" data-link-color="#E95F28" data-lang="th" data-width="400" data-height="500" href="https://twitter.com/hashpire/lists/hashpire-news?ref_src=twsrc%5Etfw">
+                    <Loader content='Loading' active/>
+                </a>
               </Grid.Column>
             </Grid.Row>
           </Grid>

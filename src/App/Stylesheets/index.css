@@ -20,3 +20,7 @@ body {
 #mobile-left-menu, #mobile-right-menu {
   align-self: center;
 }
+
+.hidden {
+  display: none;
+}

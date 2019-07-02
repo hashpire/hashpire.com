@@ -15,7 +15,25 @@ npm start
 npm run build
 ```
 
+### Deploy (for now will deploy to gh-pages)
+```
+npm run deploy
+```
+---
+### 
+Add new articles / categories (lists)
+- Edit genesis.json
+- tid: { 0: lists/array, 1: markdown }
 
+Add navbar / menu
+- Edit menuConfig.json
+
+Add routes
+- Edit routesConfig.json
+
+
+---
+## Notes
 ### Design
 ```
 

@@ -7,11 +7,10 @@ class Post extends React.Component {
   render() {
     let nodeId = this.props.match.params.id;
     console.log(this.props);
-    const disqusShortname = 'example';
+    const disqusShortname = 'hashpire';
     const disqusConfig = {
-      url: this.props.match.url,
+      // url: `https://hashpire.com${this.props.match.url}`,
       identifier: this.props.match.params.id,
-      title: 'Tata',
     };
 
     return (
