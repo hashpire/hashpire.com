@@ -14,7 +14,7 @@ class List extends React.Component {
         <Header as='h1' textAlign='center' dividing>{node.metadata.title}</Header>
         <Item.Group divided>
           {
-            children.map((child, index) => {
+            children.reverse().map((child, index) => {
               let url;
               if(child.tid == 0) {
                 url = `/tags/${child.id}`

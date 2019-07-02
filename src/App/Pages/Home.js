@@ -19,7 +19,7 @@ class Home extends React.Component {
               <Grid.Column width={8}>
                 <NodeRenderer nodeId={1} />
               </Grid.Column>
-              <Grid.Column width={3} verticalAlign='middle'>
+              <Grid.Column width={3}>
                 <a className="twitter-timeline" data-link-color="#E95F28" data-lang="th" data-width="400" data-height="500" href="https://twitter.com/hashpire/lists/hashpire-news?ref_src=twsrc%5Etfw">
                     <Loader content='Loading' active/>
                 </a>
