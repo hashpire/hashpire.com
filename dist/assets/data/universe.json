@@ -26,7 +26,7 @@
     {
       "id": 1,
       "parents": [0],
-      "children": [8, 9, 10],
+      "children": [8, 9, 10, 11],
       "tid": 0,
       "data_path": "",
       "author_id": 0,
@@ -75,7 +75,7 @@
     {
       "id": 5,
       "parents": [2],
-      "children": [],
+      "children": [11],
       "tid": 0,
       "data_path": "",
       "author_id": 0,
@@ -88,7 +88,7 @@
     {
       "id": 6,
       "parents": [3],
-      "children": [],
+      "children": [10],
       "tid": 0,
       "data_path": "",
       "author_id": 0,
@@ -143,6 +143,19 @@
       "children": [],
       "tid": 1,
       "data_path": "md/3.md",
+      "author_id": 1,
+      "metadata": {
+        "title": "Superman",
+        "description": "Bitcoin",
+        "image": ""
+      }
+    },
+    {
+      "id": 11,
+      "parents": [1, 5],
+      "children": [],
+      "tid": 1,
+      "data_path": "md/4.md",
       "author_id": 1,
       "metadata": {
         "title": "Superman",

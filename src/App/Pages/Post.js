@@ -9,7 +9,7 @@ class Post extends React.Component {
     console.log(this.props);
     const disqusShortname = 'hashpire';
     const disqusConfig = {
-      url: `https://hashpire.com${this.props.match.url}`,
+      // url: `https://hashpire.com${this.props.match.url}`,
       identifier: this.props.match.params.id,
     };
 

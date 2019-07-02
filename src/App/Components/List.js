@@ -23,7 +23,7 @@ class List extends React.Component {
               }
 
               const disqusConfig = {
-                url: `https://hashpire.com${url}`,
+                // url: `https://hashpire.com${url}`,
                 identifier: child.id
               };
 
@@ -40,7 +40,7 @@ class List extends React.Component {
                     <Item.Extra>
                       <Icon color='orange' name='comment outline' />
                       <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
-                       Comments
+                       0 Comments
                       </Disqus.CommentCount>
                       {/* <Icon color='orange' name='comment outline' />{child.children.length} &nbsp; */}
                     </Item.Extra>
